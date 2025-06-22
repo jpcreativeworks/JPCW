@@ -30,3 +30,41 @@
   font-weight: 600;
   padding: 0.5rem 1rem;
 }
+
+/* WELCOME INTRO */
+.welcome-intro {
+  background-color: #f7f1ff;
+  color: #333;
+  border-radius: 1rem;
+}
+
+.welcome-intro .lead {
+  font-size: 1.25rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* IMG LINKS */
+.link-section {
+  background-color: #6f42c1;
+}
+
+.link-section img {
+  transition: transform 0.3s ease;
+}
+
+.link-section img:hover {
+  transform: scale(1.05);
+}
+
+.link-img {
+  padding: 1rem;
+}
+
+.link-text {
+  color: white;
+  padding-top: 5px;
+  text-decoration: none;
+  
+}
