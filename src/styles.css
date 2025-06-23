@@ -68,3 +68,19 @@
   text-decoration: none;
   
 }
+
+/* FOOTER */
+.site-footer {
+  background-color: #6f42c1; /* Your signature purple */
+  color: white;
+}
+
+.footer-link {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #d6bbfc; /* Optional: soft lavender hover */
+}
