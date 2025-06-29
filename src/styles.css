@@ -84,3 +84,23 @@
 .footer-link:hover {
   color: #d6bbfc; /* Optional: soft lavender hover */
 }
+
+/* ABOUT ME */
+.about-section {
+  background-color: #f7f1ff;
+}
+
+/* CONTACT ME */
+.contact-section {
+  background-color: #6f42c1;
+}
+
+.contact-input {
+  background-color: rgba(255, 255, 255, 0.95);
+  border: none;
+  color: #333;
+}
+
+.contact-input:focus {
+  border-color: #d6bbfc;
+  box-shadow: 0 0 0 0.2rem rgba(214, 187, 252, 0.5);
