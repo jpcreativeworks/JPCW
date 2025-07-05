@@ -71,32 +71,13 @@ JP Creative Works</p>
   <div class="container text-center">
     <img src="/imgs/contact me.png" alt="Contact Me" class="img-fluid mb-4" style="max-width: 200px;">
     <h2 class="mb-4">Get in Touch</h2>
-<form action="https://your-render-url.onrender.com/send" method="POST">
-  {% if thank_you %}
-  <div class="alert alert-success text-white bg-success mt-4">
-    💌 Thank you for reaching out! I’ll be in touch soon.
-  </div>
-{% endif %}
-      <div class="mb-3">
-        <label for="name" class="form-label">Your Name</label>
-        <input type="text" name="name" class="form-control" required>
-      </div>
-      <div class="mb-3">
-        <label for="email" class="form-label">Your Email</label>
-        <input type="email" name="email" class="form-control" required>
-      </div>
-      <div class="mb-3">
-        <label for="message" class="form-label">Your Message</label>
-        <textarea name="message" rows="5" class="form-control" required></textarea>
-      </div>
-      <!-- Optional honeypot spam protection -->
-      <input type="hidden" name="_honey" style="display:none">
-      <!-- No CAPTCHA -->
-      <input type="hidden" name="_captcha" value="false">
-      <div class="text-center">
-        <button type="submit" class="btn btn-light px-4">Send Message</button>
-      </div>
-    </form>
+     <iframe 
+      src="https://jpcw-backend.onrender.com/contact-iframe"
+      width="100%" 
+      height="600px" 
+      style="border: none; border-radius: 10px; background-color: transparent;" 
+      loading="lazy">
+    </iframe>
   </div>
 </section>
     </div>
