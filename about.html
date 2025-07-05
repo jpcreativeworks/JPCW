@@ -72,6 +72,11 @@ JP Creative Works</p>
     <img src="/imgs/contact me.png" alt="Contact Me" class="img-fluid mb-4" style="max-width: 200px;">
     <h2 class="mb-4">Get in Touch</h2>
 <form action="https://your-render-url.onrender.com/send" method="POST">
+  {% if thank_you %}
+  <div class="alert alert-success text-white bg-success mt-4">
+    💌 Thank you for reaching out! I’ll be in touch soon.
+  </div>
+{% endif %}
       <div class="mb-3">
         <label for="name" class="form-label">Your Name</label>
         <input type="text" name="name" class="form-control" required>
