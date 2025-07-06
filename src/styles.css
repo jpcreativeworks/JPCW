@@ -105,3 +105,61 @@
   border-color: #d6bbfc;
   box-shadow: 0 0 0 0.2rem rgba(214, 187, 252, 0.5);
 }
+
+/* PORTFOLIO */
+.project-tile {
+  position: relative;
+  overflow: hidden;
+}
+
+.tile-wrapper {
+  position: relative;
+  transition: transform 0.3s ease;
+  border-radius: 12px;
+}
+
+.project-img {
+  width: 100%;
+  border-radius: 12px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  pointer-events: none;
+  user-select: none;
+}
+
+.tile-wrapper:hover .project-img {
+  transform: scale(1.1);
+  filter: brightness(0.7);
+}
+
+.overlay-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  color: #6f42c1;
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.tile-wrapper:hover .overlay-btn {
+  opacity: 1;
+}
+
+.project-img::selection {
+  background: none;
+}
+
+.project-img {
+  -webkit-user-drag: none;
+  user-select: none;
+  pointer-events: none;
+}
+
+.light-bg {
+  background-color: #f7f1ff;
+}
