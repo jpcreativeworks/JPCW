@@ -112,38 +112,79 @@
   overflow: hidden;
 }
 
+.row {
+  overflow: visible !important;
+  position: relative;
+}
+
 .tile-wrapper {
   position: relative;
-  transition: transform 0.3s ease;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   border-radius: 12px;
 }
 
 .project-img {
   width: 100%;
   border-radius: 12px;
-  transition: transform 0.3s ease, filter 0.3s ease;
+  transition: transform 0.4s ease, filter 0.4s ease;
   pointer-events: none;
   user-select: none;
 }
 
+.tile-wrapper:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  z-index: 10;}
+
 .tile-wrapper:hover .project-img {
-  transform: scale(1.1);
-  filter: brightness(0.7);
+  transform: none;
+}
+
+.project-overlay {
+  position: absolute;
+  inset: 0; 
+  border-radius: 12px;
+  background-color: rgba(111, 66, 193, 0.85);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  text-align: center;
+  gap: 1rem;
+}
+
+.tile-wrapper:hover .project-overlay {
+  opacity: 1;
+}
+
+.overlay-content {
+  text-align: center;
+  color: white;
+}
+
+.project-description {
+  font-size: 0.55rem;
+  line-height: 1.4;
+  margin-bottom: 1rem;
 }
 
 .overlay-btn {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   background-color: white;
   color: #6f42c1;
+  font-weight: bold;
+  text-decoration: none;
   padding: 10px 20px;
   border-radius: 30px;
-  text-decoration: none;
-  font-weight: bold;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.overlay-btn:hover {
+  background-color: #d6bbfc;
+  color: #4a2c91;
 }
 
 .tile-wrapper:hover .overlay-btn {
