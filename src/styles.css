@@ -225,6 +225,69 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  margin-bottom: 2rem;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(111, 66, 193, 0.85);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1.5rem;
+  z-index: 2;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.video-overlay p {
+  margin: 0.5rem 0;
+}
+
+.overlay-btn {
+  background-color: white;
+  color: #6f42c1;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.overlay-btn:hover {
+  background-color: #d6bbfc;
+  color: #4a2c91;
+}
+
+.tile-wrapper iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+}
+
 @media (max-width: 991px) {
   .project-description {
     font-size: 0.75rem;
