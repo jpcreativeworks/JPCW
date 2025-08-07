@@ -166,6 +166,13 @@
   transition: opacity 0.4s ease;
   text-align: center;
   gap: 1rem;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.project-overlay.hide {
+  opacity: 0 !important;
+  pointer-events: none;
 }
 
 .tile-wrapper:hover .project-overlay {
@@ -281,7 +288,14 @@
   aspect-ratio: 16 / 9;
   border-radius: 12px;
   border: none;
+}
 
+.catalog-iframe {
+  width: 100%;
+  min-width: 496px;
+  max-width: 100%;
+  transition: width 0.3s ease;
+  border-radius: 12px;
 }
 
 @media (max-width: 991px) {
@@ -291,7 +305,13 @@
 
   .tile-wrapper {
     margin-bottom: 1.5rem;
+    min-width: 496px;
   }
+
+  .catalog-iframe {
+    width: 496px !important;
+  }
+
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
