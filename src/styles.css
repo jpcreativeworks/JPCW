@@ -298,6 +298,13 @@
   border-radius: 12px;
 }
 
+.catalog-iframe,
+.tile-wrapper,
+.project-overlay {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
 @media (max-width: 991px) {
   .project-description {
     font-size: 0.75rem;
@@ -312,6 +319,12 @@
     width: 496px !important;
   }
 
+}
+
+@media (min-width: 900px) {
+  .catalog-iframe {
+    min-width: 496px !important;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
