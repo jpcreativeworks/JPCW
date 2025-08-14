@@ -463,6 +463,11 @@
     background-color: #e9d8fd;
     color: #4b2e83;
   }
+
+  .carousel-col {
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
 }
 
 
