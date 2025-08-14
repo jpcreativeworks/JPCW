@@ -309,6 +309,18 @@
   width: 100% !important;
   max-width: 100% !important;
 }
+/*carousels*/
+.tile-wrapper {
+  width: 100%;
+  max-width: 350px;
+  position: relative;
+}
+
+.carousel .carousel-inner img {
+  object-fit: cover;
+  height: auto;
+  border-radius: 8px;
+}
 
 @media (max-width: 991px) {
   .project-description {
@@ -318,10 +330,21 @@
   .tile-wrapper {
     margin-bottom: 1.5rem;
     min-width: 496px;
+    max-width: 100%;
   }
 
   .catalog-iframe {
     width: 496px !important;
+  }
+
+  .overlay-content {
+    font-size: 0.95rem;
+    padding: 1rem;
+  }
+
+  .overlay-btn {
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
   }
 
 }
