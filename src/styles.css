@@ -322,6 +322,37 @@
   border-radius: 8px;
 }
 
+.photo-card {           /* your tile wrapper for photos */
+  --photo-h: 240px;     /* default tile height */
+}
+
+.photo-card .photo-img {
+  width: 100%;
+  height: var(--photo-h);
+  object-fit: contain;         /* crops edges to keep the tile uniform */
+  background-color: #d6bbfc62;
+  object-position: center;   /* adjust per image if needed */
+  border-radius: 12px;
+  display: block;
+}
+
+/* match overlay radius to the image */
+.photo-card .project-overlay { 
+  border-radius: 12px;
+ }
+
+/* optional: add a little drop shadow to tiles (like your other sections) */
+.photo-card { 
+  box-shadow: 0 10px 24px rgba(0,0,0,0.08); 
+  border-radius: 12px; 
+}
+
+@media (min-width: 1200px) { 
+  .photo-card { 
+    --photo-h: 320px; 
+  } 
+}
+
 @media (max-width: 991px) {
   .project-description {
     font-size: 0.75rem;
@@ -468,8 +499,8 @@
     max-width: 100%;
     flex: 0 0 100%;
   }
-}
 
+}
 
 @media (max-width: 767px) {
   .project-description {
@@ -492,6 +523,10 @@
   .row > div {
     flex: 0 0 100%;
     max-width: 100%;
+  }
+
+  .photo-card { 
+    --photo-h: 280px; 
   }
 }
 
