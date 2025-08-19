@@ -45,6 +45,72 @@
   line-height: 1.6;
 }
 
+/*Portfolio nav buttons*/ 
+
+html { scroll-behavior: smooth; }
+
+.intro-copy { 
+  max-width: 900px; 
+  margin-inline: auto; 
+}
+
+.section-btn.section-btn-img{
+  display:flex;
+  align-items:center;
+  gap:.5rem;
+  padding:.55rem .9rem;               /* a touch smaller */
+  border-radius:999px;
+}
+
+.section-btn-img .section-icon{
+  height:28px;                        /* keeps images small */
+  width:auto;
+  object-fit:contain;
+  flex:0 0 auto;
+}
+/* jump buttons */
+.section-nav .section-btn{
+  background:#6f42c1;
+  color:#fff;
+  border:2px solid #6f42c1;
+  border-radius:999px;
+  padding:.65rem 1rem;
+  font-weight:700;
+  box-shadow:0 6px 16px rgba(111,66,193,.18);
+  transition:transform .15s ease, background .2s ease, border-color .2s ease;
+}
+.section-nav .section-btn:hover,
+.section-nav .section-btn:focus{
+  background:#5a39b3;
+  border-color:#5a39b3;
+  color:#fff;
+  transform:translateY(-1px);
+}
+
+/* Portfolio section nav button*/
+html { scroll-behavior: smooth; }
+
+/* sticky-in-section helper */
+.to-top-wrap{
+  position: sticky;   /* sticks near bottom as you scroll within the section */
+  bottom: 1rem;
+  z-index: 5;
+}
+
+/* purple pill button */
+.to-top-btn{
+  background-color:#5a38a8;
+  color:#fff;
+  border:none;
+  border-radius:999px;
+  padding:.5rem 1rem;
+  box-shadow:0 6px 20px rgba(0,0,0,.15);
+}
+.to-top-btn:hover{ 
+  background-color:#d6bbfc; 
+  color:#6f42c1; 
+}
+
 /* IMG LINKS */
 .link-section {
   background-color: #6f42c1;
@@ -132,6 +198,9 @@
   color: #6f42c1;
   text-decoration: none;
 }
+.intro-section .lead { margin-bottom: .5rem !important; }
+.intro-section .resume-btn { margin-top: .25rem; }
+.intro-section .portfolio-nav { margin-top: .75rem; }
 
 .tile-wrapper {
   position: relative;
@@ -322,7 +391,7 @@
   border-radius: 8px;
 }
 
-.photo-card {           /* your tile wrapper for photos */
+.photo-card {           /* tile wrapper for photos */
   --photo-h: 240px;     /* default tile height */
 }
 
@@ -341,7 +410,6 @@
   border-radius: 12px;
  }
 
-/* optional: add a little drop shadow to tiles (like your other sections) */
 .photo-card { 
   box-shadow: 0 10px 24px rgba(0,0,0,0.08); 
   border-radius: 12px; 
@@ -378,6 +446,9 @@
     padding: 0.5rem 1rem;
   }
 
+  .section-btn-img .section-icon { 
+    height:32px; 
+  }
 }
 
 @media (min-width: 900px) {
@@ -527,6 +598,10 @@
 
   .photo-card { 
     --photo-h: 280px; 
+  }
+
+  .section-nav .section-btn{ 
+    width:100%; 
   }
 }
 
