@@ -94,7 +94,7 @@ html { scroll-behavior: smooth; }
 .section-stick {
   position: sticky;
   top: clamp(12px, 2vh, 24px);
-  z-index: 8;                 /* below your tile hover overlays (z≈10) */
+  z-index: 3000;                 /* below your tile hover overlays (z≈10) */
   display: flex;
   justify-content: flex-end;
   pointer-events: none;       /* wrapper doesn't block content */
@@ -285,6 +285,17 @@ html { scroll-behavior: smooth; }
   margin-bottom: 1rem;
 }
 
+.project-title {
+ display: none;          /* hidden normally */
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin: 0;  
+}
+
+.project-description {
+  margin: 0 0 1rem;         /* remove the default top margin */
+}
+
 .overlay-btn {
   background-color: white;
   color: #6f42c1;
@@ -440,6 +451,25 @@ html { scroll-behavior: smooth; }
   .photo-card { 
     --photo-h: 320px; 
   } 
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  #web-dev-content .project-title,
+  #video-content .project-title {
+    display: block;
+  }
+
+  #web-dev-content .project-description,
+  #video-content .project-description {
+    display: none;
+  }
+
+  /* Tighten spacing so the overlay doesn’t feel empty */
+  #web-dev-content .project-overlay,
+  #video-content .project-overlay {
+    gap: .75rem;
+    padding: 1rem 1.25rem;
+  }
 }
 
 @media (max-width: 991px) {
