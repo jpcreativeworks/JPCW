@@ -91,11 +91,32 @@ html { scroll-behavior: smooth; }
 html { scroll-behavior: smooth; }
 
 /* sticky-in-section helper */
-.to-top-wrap{
-  position: sticky;   /* sticks near bottom as you scroll within the section */
-  bottom: 1rem;
-  z-index: 5;
+.section-stick {
+  position: sticky;
+  top: clamp(12px, 2vh, 24px);
+  z-index: 8;                 /* below your tile hover overlays (z≈10) */
+  display: flex;
+  justify-content: flex-end;
+  pointer-events: none;       /* wrapper doesn't block content */
+  margin-bottom: .5rem;
 }
+
+.section-stick .btn-top {
+  pointer-events: auto;       /* only the button is clickable */
+  background-color: #6f42c1;
+  color: #fff;
+  border: none;
+  border-radius: 9999px;
+  padding: .55rem .85rem;
+  line-height: 1;
+  box-shadow: 0 6px 20px rgba(0,0,0,.12);
+  display: inline-flex;
+  align-items: center;
+  gap: .25rem;
+  font-weight: 600;
+}
+.section-stick .btn-top:hover { background:#5b36a3; }
+.section-stick .btn-top:active { transform: translateY(1px); }
 
 /* purple pill button */
 .to-top-btn{
@@ -621,4 +642,14 @@ html { scroll-behavior: smooth; }
     font-size: 0.85rem;
     padding: 0.4rem 0.8rem;
   }
+
+  .section-stick .btn-top { 
+    padding:.45rem .7rem; 
+    font-size:.9rem; 
+  }
+
+  .section-stick .btn-top .label { 
+    display:none; 
+  } /* icon-only on xs */
+
 }
