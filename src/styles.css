@@ -404,17 +404,23 @@ html { scroll-behavior: smooth; }
   border-radius: 12px;
 }
 
+.carousel-col .tile-wrapper { 
+  /*max-width: 350px;*/
+  padding: 0 !important; 
+}
+
 .catalog-iframe,
-.tile-wrapper,
 .project-overlay {
   width: 100% !important;
   max-width: 100% !important;
 }
+
 /*carousels*/
 .tile-wrapper {
   width: 100%;
-  max-width: 350px;
+  max-width: 100%;
   position: relative;
+  padding: 0;
 }
 
 .carousel .carousel-inner img {
@@ -484,7 +490,7 @@ html { scroll-behavior: smooth; }
   }
 
   .catalog-iframe {
-    width: 496px !important;
+    width: 100% !important;
   }
 
   .overlay-content {
@@ -523,24 +529,22 @@ html { scroll-behavior: smooth; }
 
   .tile-wrapper {
     width: 100%;
-    max-width: 95vw;
     margin: 0 auto;
     transform: none; 
     padding: 0 1rem;
   }
 
+  .project-tile,
+  .tile-wrapper {
+    min-width: 0 !important;    
+    max-width: 100% !important;
+    padding: 0 !important;       
+    margin: 0 auto;
+  }
+
   .project-img {
     width: 100%;
     height: auto;
-  }
-
-  .project-overlay {
-    overflow-y: auto;
-    max-height: 100%;
-    padding: 2rem 1rem 1rem; 
-    font-size: 0.65rem;
-    line-height: 1.4;
-    scrollbar-width: thin;
   }
 
   .project-overlay::-webkit-scrollbar {
@@ -562,11 +566,27 @@ html { scroll-behavior: smooth; }
     align-items: center;
     flex-direction: column;
     margin: 0 auto;
-    max-width: 100%;
+    width: 100% !important;
+    padding: 0 !important;
+  }
+
+  .catalog-wrapper .catalog-iframe {
+  display: block;
+  margin: 0 auto;
+  }
+
+  #graphics-catalog .catalog-wrapper{
+    max-width: 720px;              /* fits Bootstrap container at md */
+    margin-inline: auto;
+  }
+  #graphics-catalog .catalog-iframe{
+    width: 100% !important;
+    min-width: 0 !important;       /* undo global 496px min */
+    height: auto !important;
+    aspect-ratio: 16/9;            /* keep shape without hard height */
   }
 
   .catalog-iframe {
-    width: 496px !important;
     max-width: 100%;
     height: 426px;
     display: block;
@@ -584,7 +604,7 @@ html { scroll-behavior: smooth; }
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: left;
+    text-align: center;
     padding: 20px;
     box-sizing: border-box;
     z-index: 2;
@@ -596,7 +616,7 @@ html { scroll-behavior: smooth; }
   }
 
   .project-description {
-    font-size: 1rem;
+    font-size: .7rem;
     line-height: 1.5;
   }
 
@@ -618,8 +638,32 @@ html { scroll-behavior: smooth; }
   }
 
   .carousel-col {
-    max-width: 100%;
+    max-width: 520px;
     flex: 0 0 100%;
+    justify-content: center;
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 5px;
+  }
+
+  .carousel-col .carousel-inner img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+
+  .carousel-col { 
+    display:flex; 
+    justify-content:center; 
+  }
+
+  .carousel-col .tile-wrapper { 
+    max-width: 420px; 
+  } 
+
+  .tile-wrapper:not(.catalog-wrapper){ 
+    padding: 0 !important; 
   }
 
 }
@@ -631,6 +675,7 @@ html { scroll-behavior: smooth; }
 
   .tile-wrapper {
     transform: none !important;
+    min-width: 496px
   }
 
   .project-overlay {
